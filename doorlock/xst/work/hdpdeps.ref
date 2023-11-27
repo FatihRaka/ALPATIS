@@ -1,0 +1,8 @@
+V3 4
+FL "//vmware-host/shared folders/Downloads/doorlock/top.vhd" 2022/11/30.19:33:30 O.87xd
+EN work/top 1669811614 \
+      FL "//vmware-host/shared folders/Downloads/doorlock/top.vhd" \
+      PB ieee/std_logic_1164 1325952872
+AR work/top/Behavioral 1669811615 \
+      FL "//vmware-host/shared folders/Downloads/doorlock/top.vhd" EN work/top 1669811614
+FL C:/Users/fatih/doorlock/top.vhd 2022/11/27.10:01:03 O.87xd

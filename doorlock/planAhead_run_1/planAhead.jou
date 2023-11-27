@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 13:06:31 MST 2011
+# Start of session at: Sun Nov 27 10:51:11 2022
+# Process ID: 2008
+# Log file: C:/Users/fatih/doorlock/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/fatih/doorlock/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/fatih/doorlock/pa.fromHdl.tcl
+startgroup
+set_property loc IPAD98 [get_ports {Switch[0]}]
+endgroup
+startgroup
+set_property loc IPAD103 [get_ports {Switch[1]}]
+endgroup
+startgroup
+set_property loc IPAD83 [get_ports {Switch[2]}]
+endgroup
+startgroup
+set_property loc PAD94 [get_ports {Switch[3]}]
+endgroup
+startgroup
+set_property loc PAD45 [get_ports {LED[0]}]
+endgroup
+startgroup
+set_property loc PAD44 [get_ports {LED[1]}]
+endgroup
+startgroup
+set_property loc PAD41 [get_ports {LED[2]}]
+endgroup
+startgroup
+set_property loc PAD40 [get_ports {LED[3]}]
+endgroup
+startgroup
+set_property DRIVE {} [get_ports [list {LED[3]} {LED[2]} {LED[1]} {LED[0]}]]
+endgroup
+set_property DRIVE 8 [get_ports [list {LED[3]} {LED[2]} {LED[1]} {LED[0]}]]
+startgroup
+set_property SLEW {} [get_ports [list {Switch[0]}]]
+endgroup
+set_property PULLUP 1 [get_ports [list {Switch[3]} {Switch[2]} {Switch[1]} {Switch[0]}]]
+startgroup
+set_property loc IPAD171 [get_ports Button]
+endgroup
+set_property PULLDOWN 1 [get_ports [list Button]]
+startgroup
+set_property loc PAD5 [get_ports Lock]
+endgroup
+startgroup
+set_property loc PAD27 [get_ports clock]
+endgroup
+startgroup
+set_property loc IPAD64 [get_ports reset]
+endgroup
+set_property PULLDOWN 1 [get_ports [list reset]]
+save_design

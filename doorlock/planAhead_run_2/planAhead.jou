@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 13:06:31 MST 2011
+# Start of session at: Wed Nov 30 19:57:22 2022
+# Process ID: 3176
+# Log file: C:/Users/fatih/Downloads/doorlock/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/fatih/Downloads/doorlock/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/fatih/Downloads/doorlock/pa.fromHdl.tcl
+set_property pulltype {} [get_ports [list Lock]]
+startgroup
+set_property DRIVE {} [get_ports [list Lock]]
+endgroup
+set_property DRIVE 8 [get_ports [list Lock]]
+startgroup
+set_property loc IPAD73 [get_ports ButtonPW]
+endgroup
+set_property PULLDOWN 1 [get_ports [list ButtonPW]]
+save_design
+exit
+stop_gui
