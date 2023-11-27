@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Wed Nov 30 20:05:21 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Switch<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "Switch<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "Switch<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "Switch<3>" LOCATE = SITE "L17" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "Lock" LOCATE = SITE "A4" LEVEL 1;
+COMP "ButtonPW" LOCATE = SITE "H13" LEVEL 1;
+COMP "Button" LOCATE = SITE "V4" LEVEL 1;
+COMP "clock" LOCATE = SITE "C9" LEVEL 1;
+COMP "reset" LOCATE = SITE "D18" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clock = BEL "state_reg_FSM_FFd3" BEL "state_reg_FSM_FFd1" BEL
+        "state_reg_FSM_FFd2" BEL "state_reg_FSM_FFd4" BEL "state_reg_FSM_FFd5"
+        BEL "clock_BUFGP/BUFG.GCLKMUX" BEL "clock_BUFGP/BUFG";
+TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+SCHEMATIC END;
+

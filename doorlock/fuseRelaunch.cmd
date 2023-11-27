@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "Z:/Downloads/doorlock/top_test_isim_beh.exe" -prj "Z:/Downloads/doorlock/top_test_beh.prj" "work.top_test" 

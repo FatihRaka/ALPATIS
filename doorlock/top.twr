@@ -1,0 +1,447 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml top.twx top.ncd -o top.twr top.pcf -ucf top.ucf
+
+Design file:              top.ncd
+Physical constraint file: top.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 33 paths analyzed, 18 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.595ns.
+--------------------------------------------------------------------------------
+
+Paths for end point state_reg_FSM_FFd1 (SLICE_X51Y55.F2), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     13.405ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd2 (FF)
+  Destination:          state_reg_FSM_FFd1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.595ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd2 to state_reg_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y55.XQ      Tcko                  0.592   state_reg_FSM_FFd2
+                                                       state_reg_FSM_FFd2
+    SLICE_X50Y70.G3      net (fanout=16)       1.914   state_reg_FSM_FFd2
+    SLICE_X50Y70.Y       Tilo                  0.759   LED_1_OBUF
+                                                       state_reg_FSM_FFd4-In21
+    SLICE_X51Y55.F2      net (fanout=4)        2.493   PW_or0000
+    SLICE_X51Y55.CLK     Tfck                  0.837   state_reg_FSM_FFd1
+                                                       state_reg_FSM_FFd1-In
+                                                       state_reg_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.595ns (2.188ns logic, 4.407ns route)
+                                                       (33.2% logic, 66.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     13.611ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd3 (FF)
+  Destination:          state_reg_FSM_FFd1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      6.389ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd3 to state_reg_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y54.XQ      Tcko                  0.591   state_reg_FSM_FFd3
+                                                       state_reg_FSM_FFd3
+    SLICE_X50Y70.G1      net (fanout=16)       1.709   state_reg_FSM_FFd3
+    SLICE_X50Y70.Y       Tilo                  0.759   LED_1_OBUF
+                                                       state_reg_FSM_FFd4-In21
+    SLICE_X51Y55.F2      net (fanout=4)        2.493   PW_or0000
+    SLICE_X51Y55.CLK     Tfck                  0.837   state_reg_FSM_FFd1
+                                                       state_reg_FSM_FFd1-In
+                                                       state_reg_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      6.389ns (2.187ns logic, 4.202ns route)
+                                                       (34.2% logic, 65.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point state_reg_FSM_FFd4 (SLICE_X51Y57.F2), 5 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     15.982ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd1 (FF)
+  Destination:          state_reg_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.015ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.003ns (0.008 - 0.011)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd1 to state_reg_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y55.XQ      Tcko                  0.591   state_reg_FSM_FFd1
+                                                       state_reg_FSM_FFd1
+    SLICE_X49Y56.G3      net (fanout=8)        0.729   state_reg_FSM_FFd1
+    SLICE_X49Y56.Y       Tilo                  0.704   state_reg_FSM_FFd4-In42
+                                                       state_reg_FSM_FFd4-In42_SW0
+    SLICE_X49Y56.F3      net (fanout=1)        0.023   state_reg_FSM_FFd4-In42_SW0/O
+    SLICE_X49Y56.X       Tilo                  0.704   state_reg_FSM_FFd4-In42
+                                                       state_reg_FSM_FFd4-In42
+    SLICE_X51Y57.F2      net (fanout=1)        0.427   state_reg_FSM_FFd4-In42
+    SLICE_X51Y57.CLK     Tfck                  0.837   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In177
+                                                       state_reg_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.015ns (2.836ns logic, 1.179ns route)
+                                                       (70.6% logic, 29.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.189ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd5 (FF)
+  Destination:          state_reg_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.811ns (Levels of Logic = 3)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd5 to state_reg_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y57.XQ      Tcko                  0.592   state_reg_FSM_FFd5
+                                                       state_reg_FSM_FFd5
+    SLICE_X49Y56.G4      net (fanout=11)       0.524   state_reg_FSM_FFd5
+    SLICE_X49Y56.Y       Tilo                  0.704   state_reg_FSM_FFd4-In42
+                                                       state_reg_FSM_FFd4-In42_SW0
+    SLICE_X49Y56.F3      net (fanout=1)        0.023   state_reg_FSM_FFd4-In42_SW0/O
+    SLICE_X49Y56.X       Tilo                  0.704   state_reg_FSM_FFd4-In42
+                                                       state_reg_FSM_FFd4-In42
+    SLICE_X51Y57.F2      net (fanout=1)        0.427   state_reg_FSM_FFd4-In42
+    SLICE_X51Y57.CLK     Tfck                  0.837   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In177
+                                                       state_reg_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.811ns (2.837ns logic, 0.974ns route)
+                                                       (74.4% logic, 25.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.217ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd2 (FF)
+  Destination:          state_reg_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.780ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.003ns (0.008 - 0.011)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd2 to state_reg_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y55.XQ      Tcko                  0.592   state_reg_FSM_FFd2
+                                                       state_reg_FSM_FFd2
+    SLICE_X49Y56.F2      net (fanout=16)       1.220   state_reg_FSM_FFd2
+    SLICE_X49Y56.X       Tilo                  0.704   state_reg_FSM_FFd4-In42
+                                                       state_reg_FSM_FFd4-In42
+    SLICE_X51Y57.F2      net (fanout=1)        0.427   state_reg_FSM_FFd4-In42
+    SLICE_X51Y57.CLK     Tfck                  0.837   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In177
+                                                       state_reg_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.780ns (2.133ns logic, 1.647ns route)
+                                                       (56.4% logic, 43.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point state_reg_FSM_FFd4 (SLICE_X51Y57.F4), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     16.012ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd3 (FF)
+  Destination:          state_reg_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.985ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.003ns (0.008 - 0.011)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd3 to state_reg_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y54.XQ      Tcko                  0.591   state_reg_FSM_FFd3
+                                                       state_reg_FSM_FFd3
+    SLICE_X48Y57.G2      net (fanout=16)       0.731   state_reg_FSM_FFd3
+    SLICE_X48Y57.Y       Tilo                  0.759   LED_3_OBUF
+                                                       state_reg_FSM_FFd4-In148
+    SLICE_X51Y57.G4      net (fanout=1)        0.340   state_reg_FSM_FFd4-In148
+    SLICE_X51Y57.Y       Tilo                  0.704   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In166
+    SLICE_X51Y57.F4      net (fanout=1)        0.023   state_reg_FSM_FFd4-In166/O
+    SLICE_X51Y57.CLK     Tfck                  0.837   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In177
+                                                       state_reg_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.985ns (2.891ns logic, 1.094ns route)
+                                                       (72.5% logic, 27.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     16.027ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd2 (FF)
+  Destination:          state_reg_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      3.970ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.003ns (0.008 - 0.011)
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd2 to state_reg_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y55.XQ      Tcko                  0.592   state_reg_FSM_FFd2
+                                                       state_reg_FSM_FFd2
+    SLICE_X48Y57.G4      net (fanout=16)       0.715   state_reg_FSM_FFd2
+    SLICE_X48Y57.Y       Tilo                  0.759   LED_3_OBUF
+                                                       state_reg_FSM_FFd4-In148
+    SLICE_X51Y57.G4      net (fanout=1)        0.340   state_reg_FSM_FFd4-In148
+    SLICE_X51Y57.Y       Tilo                  0.704   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In166
+    SLICE_X51Y57.F4      net (fanout=1)        0.023   state_reg_FSM_FFd4-In166/O
+    SLICE_X51Y57.CLK     Tfck                  0.837   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In177
+                                                       state_reg_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.970ns (2.892ns logic, 1.078ns route)
+                                                       (72.8% logic, 27.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     17.067ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_reg_FSM_FFd4 (FF)
+  Destination:          state_reg_FSM_FFd4 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      2.933ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 0.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_reg_FSM_FFd4 to state_reg_FSM_FFd4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y57.XQ      Tcko                  0.591   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4
+    SLICE_X51Y57.G3      net (fanout=13)       0.778   state_reg_FSM_FFd4
+    SLICE_X51Y57.Y       Tilo                  0.704   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In166
+    SLICE_X51Y57.F4      net (fanout=1)        0.023   state_reg_FSM_FFd4-In166/O
+    SLICE_X51Y57.CLK     Tfck                  0.837   state_reg_FSM_FFd4
+                                                       state_reg_FSM_FFd4-In177
+                                                       state_reg_FSM_FFd4
+    -------------------------------------------------  ---------------------------
+    Total                                      2.933ns (2.132ns logic, 0.801ns route)
+                                                       (72.7% logic, 27.3% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point state_reg_FSM_FFd1 (SLICE_X51Y55.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.529ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               state_reg_FSM_FFd1 (FF)
+  Destination:          state_reg_FSM_FFd1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.529ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 20.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: state_reg_FSM_FFd1 to state_reg_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y55.XQ      Tcko                  0.473   state_reg_FSM_FFd1
+                                                       state_reg_FSM_FFd1
+    SLICE_X51Y55.F1      net (fanout=8)        0.540   state_reg_FSM_FFd1
+    SLICE_X51Y55.CLK     Tckf        (-Th)    -0.516   state_reg_FSM_FFd1
+                                                       state_reg_FSM_FFd1-In
+                                                       state_reg_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.529ns (0.989ns logic, 0.540ns route)
+                                                       (64.7% logic, 35.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point state_reg_FSM_FFd5 (SLICE_X50Y57.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.568ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               state_reg_FSM_FFd5 (FF)
+  Destination:          state_reg_FSM_FFd5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.568ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 20.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: state_reg_FSM_FFd5 to state_reg_FSM_FFd5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X50Y57.XQ      Tcko                  0.474   state_reg_FSM_FFd5
+                                                       state_reg_FSM_FFd5
+    SLICE_X50Y57.BX      net (fanout=11)       0.496   state_reg_FSM_FFd5
+    SLICE_X50Y57.CLK     Tckdi       (-Th)    -0.598   state_reg_FSM_FFd5
+                                                       state_reg_FSM_FFd5-In93
+                                                       state_reg_FSM_FFd5
+    -------------------------------------------------  ---------------------------
+    Total                                      1.568ns (1.072ns logic, 0.496ns route)
+                                                       (68.4% logic, 31.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point state_reg_FSM_FFd3 (SLICE_X51Y54.F2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.634ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               state_reg_FSM_FFd3 (FF)
+  Destination:          state_reg_FSM_FFd3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.634ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clock_BUFGP rising at 20.000ns
+  Destination Clock:    clock_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: state_reg_FSM_FFd3 to state_reg_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y54.XQ      Tcko                  0.473   state_reg_FSM_FFd3
+                                                       state_reg_FSM_FFd3
+    SLICE_X51Y54.F2      net (fanout=16)       0.645   state_reg_FSM_FFd3
+    SLICE_X51Y54.CLK     Tckf        (-Th)    -0.516   state_reg_FSM_FFd3
+                                                       state_reg_FSM_FFd3-In1
+                                                       state_reg_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.634ns (0.989ns logic, 0.645ns route)
+                                                       (60.5% logic, 39.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clock = PERIOD TIMEGRP "clock" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: state_reg_FSM_FFd5/SR
+  Logical resource: state_reg_FSM_FFd5/SR
+  Location pin: SLICE_X50Y57.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: state_reg_FSM_FFd5/SR
+  Logical resource: state_reg_FSM_FFd5/SR
+  Location pin: SLICE_X50Y57.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: state_reg_FSM_FFd3/SR
+  Logical resource: state_reg_FSM_FFd3/SR
+  Location pin: SLICE_X51Y54.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    6.595|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 33 paths, 0 nets, and 47 connections
+
+Design statistics:
+   Minimum period:   6.595ns{1}   (Maximum frequency: 151.630MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Nov 30 20:05:29 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 163 MB
+
+
+

@@ -1,0 +1,47 @@
+
+#Created by Constraints Editor (xc3s500e-fg320-4) - 2022/11/27
+NET "clock" TNM_NET = "clock";
+TIMESPEC TS_clock = PERIOD "clock" 20 ns HIGH 50 %;
+
+
+NET "Button" LOC = V4;
+NET "LED[0]" LOC = F12;
+NET "LED[1]" LOC = E12;
+NET "LED[2]" LOC = E11;
+NET "LED[3]" LOC = F11;
+NET "Lock" LOC = A4;
+NET "Switch[0]" LOC = L13;
+NET "Switch[1]" LOC = L14;
+NET "Switch[2]" LOC = H18;
+NET "Switch[3]" LOC = L17;
+NET "clock" LOC = C9;
+NET "reset" LOC = D18;
+
+
+NET "LED[0]" DRIVE = 8;
+NET "LED[1]" DRIVE = 8;
+NET "LED[2]" DRIVE = 8;
+NET "LED[3]" DRIVE = 8;
+NET "Switch[0]" SLEW = SLOW;
+NET "Button" PULLDOWN;
+NET "Switch[0]" PULLUP;
+NET "Switch[1]" PULLUP;
+NET "Switch[2]" PULLUP;
+NET "Switch[3]" PULLUP;
+NET "reset" PULLDOWN;
+
+
+
+
+NET "Lock" DRIVE = 8;
+
+
+NET "Lock" IOSTANDARD = LVCMOS25;
+
+# PlanAhead Generated physical constraints 
+
+NET "ButtonPW" LOC = H13;
+
+# PlanAhead Generated IO constraints 
+
+NET "ButtonPW" PULLDOWN;

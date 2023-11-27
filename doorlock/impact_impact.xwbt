@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=Z:\Downloads\doorlock\impact.xsl
+OUTFILE=Z:\Downloads\doorlock\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=Z:\Downloads\doorlock
+LICENSE=iMPACT
+USER_INFO=iMPACT
